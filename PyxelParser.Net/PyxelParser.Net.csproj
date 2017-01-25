@@ -1,10 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup Label="Configuration">
     <DocumentationFile>bin\Debug\netstandard1.1\PyxelParser.Net.xml</DocumentationFile>
     <RootNamespace>PyxelParser</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
+    <PackageId>PyxelParser.Net</PackageId>
+    <PackageVersion>0.5.0-beta</PackageVersion>
+    <Authors>Daniel Sör</Authors>
+    <Description>Utility for parsing *.pyxel files.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright 2017 (c) Daniel Sör. All rights reserved.</Copyright>
+    <PackageTags>pyxel parser pyxelparser</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" />
