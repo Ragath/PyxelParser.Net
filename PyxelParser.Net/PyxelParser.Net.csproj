@@ -9,6 +9,7 @@
     <PackageVersion>0.6.0</PackageVersion>
     <Authors>Daniel Sör</Authors>
     <Description>Utility for parsing *.pyxel files.</Description>
+    <PackageProjectUrl>https://github.com/Ragath/PyxelParser.Net/</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Ragath/PyxelParser.Net/master/LICENSE.txt</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2017 (c) Daniel Sör. All rights reserved.</Copyright>
