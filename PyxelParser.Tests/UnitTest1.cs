@@ -1,4 +1,5 @@
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -10,8 +11,8 @@ namespace PyxelParser.Tests
         [TestMethod]
         public void TestParsing()
         {
-            const string file = "Data_0_4_3.pyxel";
-            using (var document = new Document(Data.Resources.GetStream(file)))
+            const string file = @"Data\Data_0_4_3.pyxel";
+            using (var document = new Document(File.OpenRead(file)))
             {
                 //Metadata
                 var metadata = document.MetaData.Value;
