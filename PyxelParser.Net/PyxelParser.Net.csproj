@@ -1,31 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  
-  <PropertyGroup Label="Configuration">
-    <DocumentationFile>bin\Debug\netstandard1.1\PyxelParser.Net.xml</DocumentationFile>
-    <RootNamespace>PyxelParser</RootNamespace>
-  </PropertyGroup>
-  
-  <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>PyxelParser.Net</PackageId>
-    <Product>PyxelParser.Net</Product>
-    <Company>Daniel Sör</Company>
-    <Authors>Daniel Sör</Authors>
-    <Description>Utility for parsing *.pyxel files.</Description>
-    <PackageTags>pyxel parser pyxelparser</PackageTags>
-    <Copyright>Copyright 2017 (c) Daniel Sör. All rights reserved.</Copyright>
-    <PackageLicenseUrl>https://github.com/Ragath/PyxelParser.Net/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Ragath/PyxelParser.Net/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Ragath/PyxelParser.Net/</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012">
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Company>Daniel Sör</Company>
+		<Authors>Daniel Sör</Authors>
+		<Description>Utility for parsing *.pyxel files.</Description>
+		<PackageTags>pyxel parser pyxelparser</PackageTags>
+		<Copyright>Copyright 2017 (c) Daniel Sör. All rights reserved.</Copyright>
+		<PackageProjectUrl>https://github.com/Ragath/PyxelParser.Net/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Ragath/PyxelParser.Net/</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
 </Project>

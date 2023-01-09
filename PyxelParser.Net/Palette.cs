@@ -1,34 +1,30 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿namespace PyxelParser;
 
-namespace PyxelParser
+/// <summary>
+/// Pyxel Palette
+/// </summary>
+public class Palette
 {
     /// <summary>
-    /// Pyxel Palette
+    /// Columns
     /// </summary>
-    public class Palette
-    {
-        /// <summary>
-        /// Columns
-        /// </summary>
-        [JsonProperty("width")]
-        public int Width { get; set; }
-        /// <summary>
-        /// Rows
-        /// </summary>
-        [JsonProperty("height")]
-        public int Height { get; set; }
+    [JsonPropertyName("width")]
+    public int Width { get; set; }
+    /// <summary>
+    /// Rows
+    /// </summary>
+    [JsonPropertyName("height")]
+    public int Height { get; set; }
 
-        /// <summary>
-        /// Color-count
-        /// </summary>
-        [JsonProperty("numColors")]
-        public int NumColors { get; set; }
+    /// <summary>
+    /// Color-count
+    /// </summary>
+    [JsonPropertyName("numColors")]
+    public int NumColors { get; set; }
 
-        /// <summary>
-        /// Colors in hexadecimal AARRGGBB format
-        /// </summary>
-        [JsonProperty("colors")]
-        public Dictionary<int, string> Colors { get; set; }
-    }
+    /// <summary>
+    /// Colors in hexadecimal AARRGGBB format
+    /// </summary>
+    [JsonPropertyName("colors")]
+    public Dictionary<int, string> Colors { get; set; } = null!;
 }

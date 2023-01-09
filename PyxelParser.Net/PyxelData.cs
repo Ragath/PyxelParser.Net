@@ -1,53 +1,49 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿namespace PyxelParser;
 
-namespace PyxelParser
+/// <summary>
+/// Pyxel metadata
+/// </summary>
+public class PyxelData
 {
     /// <summary>
-    /// Pyxel metadata
+    /// Pyxel version
     /// </summary>
-    public class PyxelData
-    {
-        /// <summary>
-        /// Pyxel version
-        /// </summary>
-        [JsonProperty("version")]
-        public string Version { get; set; }
+    [JsonPropertyName("version")]
+    public string Version { get; set; } = null!;
 
-        /// <summary>
-        /// *.pyxel filename without extension
-        /// </summary>
-        [JsonProperty("name")]
-        public string Name { get; set; }
+    /// <summary>
+    /// *.pyxel filename without extension
+    /// </summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = null!;
 
-        /// <summary>
-        /// Tileset
-        /// </summary>
-        [JsonProperty("tileset")]
-        public Tileset Tileset { get; set; }
+    /// <summary>
+    /// Tileset
+    /// </summary>
+    [JsonPropertyName("tileset")]
+    public Tileset Tileset { get; set; } = null!;
 
-        /// <summary>
-        /// Settings
-        /// </summary>
-        [JsonProperty("settings")]
-        public Settings Settings { get; set; }
+    /// <summary>
+    /// Settings
+    /// </summary>
+    [JsonPropertyName("settings")]
+    public Settings Settings { get; set; } = null!;
 
-        /// <summary>
-        /// Palette
-        /// </summary>
-        [JsonProperty("palette")]
-        public Palette Palette { get; set; }
+    /// <summary>
+    /// Palette
+    /// </summary>
+    [JsonPropertyName("palette")]
+    public Palette Palette { get; set; } = null!;
 
-        /// <summary>
-        /// Canvas
-        /// </summary>
-        [JsonProperty("canvas")]
-        public Canvas Canvas { get; set; }
+    /// <summary>
+    /// Canvas
+    /// </summary>
+    [JsonPropertyName("canvas")]
+    public Canvas Canvas { get; set; } = null!;
 
-        /// <summary>
-        /// Animations
-        /// </summary>
-        [JsonProperty("animations")]
-        public Dictionary<int, Animation> Animations { get; set; }
-    }
+    /// <summary>
+    /// Animations
+    /// </summary>
+    [JsonPropertyName("animations")]
+    public Dictionary<int, Animation> Animations { get; set; } = null!;
 }

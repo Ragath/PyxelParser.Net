@@ -1,41 +1,37 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿namespace PyxelParser;
 
-namespace PyxelParser
+/// <summary>
+/// Canvas Layer
+/// </summary>
+public class Layer
 {
     /// <summary>
-    /// Canvas Layer
+    /// Layer Name
     /// </summary>
-    public class Layer
-    {
-        /// <summary>
-        /// Layer Name
-        /// </summary>
-        [JsonProperty("name")]
-        public string Name { get; set; }
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = null!;
 
-        /// <summary>
-        /// Transparency
-        /// </summary>
-        [JsonProperty("alpha")]
-        public byte Alpha { get; set; }
+    /// <summary>
+    /// Transparency
+    /// </summary>
+    [JsonPropertyName("alpha")]
+    public byte Alpha { get; set; }
 
-        /// <summary>
-        /// Hidden
-        /// </summary>
-        [JsonProperty("hidden")]
-        public bool Hidden { get; set; }
+    /// <summary>
+    /// Hidden
+    /// </summary>
+    [JsonPropertyName("hidden")]
+    public bool Hidden { get; set; }
 
-        /// <summary>
-        /// BlendMode name
-        /// </summary>
-        [JsonProperty("blendMode")]
-        public string BlendMode { get; set; }
+    /// <summary>
+    /// BlendMode name
+    /// </summary>
+    [JsonPropertyName("blendMode")]
+    public string BlendMode { get; set; } = null!;
 
-        /// <summary>
-        /// Tile references
-        /// </summary>
-        [JsonProperty("tileRefs")]
-        public Dictionary<int, Tileref> TileRefs { get; set; }
-    }
+    /// <summary>
+    /// Tile references
+    /// </summary>
+    [JsonPropertyName("tileRefs")]
+    public Dictionary<int, Tileref> TileRefs { get; set; } = null!;
 }
